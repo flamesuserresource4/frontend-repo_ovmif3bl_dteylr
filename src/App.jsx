@@ -1,27 +1,27 @@
-import { useState } from 'react'
+import Hero from './components/Hero'
+import About from './components/About'
+import Projects from './components/Projects'
+import Contact from './components/Contact'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <main className="font-['Inter',_ui-sans-serif,_system-ui] bg-black text-white">
+      <header className="fixed inset-x-0 top-0 z-50 mx-auto max-w-7xl px-6 py-4">
+        <div className="flex items-center justify-between rounded-full border border-white/10 bg-white/5 px-4 py-2 backdrop-blur-md">
+          <a href="#home" className="text-sm font-medium tracking-wide text-white/90">FUTUR.DEV</a>
+          <nav className="hidden gap-6 md:flex text-sm text-white/70">
+            <a href="#about" className="hover:text-white transition-colors">About</a>
+            <a href="#projects" className="hover:text-white transition-colors">Projects</a>
+            <a href="#contact" className="hover:text-white transition-colors">Contact</a>
+          </nav>
         </div>
-      </div>
-    </div>
+      </header>
+
+      <Hero />
+      <About />
+      <Projects />
+      <Contact />
+    </main>
   )
 }
 
